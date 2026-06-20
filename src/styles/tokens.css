@@ -1,0 +1,42 @@
+/* =========================================================
+   DESIGN TOKENS
+   Change these CSS variables to retheme the entire site.
+   (e.g. swap --blue / --blue-deep for a different brand color)
+   ========================================================= */
+:root{
+  /* surfaces */
+  --bg:#EDF3F9;
+  --bg-soft:#E3EDF6;
+  --white:#FFFFFF;
+
+  /* text */
+  --ink:#273A52;
+  --ink-soft:#475D77;
+  --muted:#6E8198;
+  --muted-2:#9AAAC0;
+
+  /* lines */
+  --line:rgba(39,58,82,.09);
+  --line-strong:rgba(39,58,82,.15);
+
+  /* brand (light blue) */
+  --blue:#5E97D6;
+  --blue-deep:#3F73B5;
+  --blue-soft:#AECBE9;
+  --sky:#7FB0E4;
+
+  --grad:linear-gradient(120deg,#6FA3DD,#9CC2EC);
+  --grad-deep:linear-gradient(120deg,#3F73B5,#5E97D6);
+
+  /* glass */
+  --glass:rgba(255,255,255,.6);
+  --glass-strong:rgba(255,255,255,.76);
+  --glass-border:rgba(255,255,255,.9);
+
+  /* shape & motion */
+  --radius:26px;
+  --maxw:1180px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --shadow:0 26px 60px -30px rgba(40,70,110,.32);
+  --shadow-soft:0 14px 40px -24px rgba(40,70,110,.26);
+}
