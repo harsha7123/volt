@@ -1,4 +1,4 @@
-# Voltway — EV Charging Website (React + Vite)
+# GridX — EV Charging Website (React + Vite)
 
 A single-page EV charging site, built to be **edited and expanded without touching component code**.
 Light-blue / glass / water aesthetic with an interactive 3D charging station.
@@ -78,7 +78,16 @@ src/
 ## Notes
 
 - Animations respect the OS "reduce motion" setting.
-- The 3D charger tilt is a desktop pointer effect; on touch devices it shows a
-  pleasant fixed angle instead.
+- The hero is a **WebGL energy orb** (react-three-fiber). three.js is code-split
+  and lazy-loaded, so it never blocks first paint — and on mobile or reduced-motion
+  it's never downloaded at all (a soft CSS gradient orb shows instead).
+- Scroll reveals, the staggered hero entrance, and the count-up stat numbers use
+  **Motion** (`motion/react`).
 - Brand name, phone, email, address, and all stats are **placeholders** — replace
   them in `src/data/site.js`.
+
+## Libraries
+
+- `react`, `react-dom`, `vite` — base stack
+- `three`, `@react-three/fiber`, `@react-three/drei` — the WebGL hero orb
+- `motion` — scroll reveals, hero entrance, micro-interactions

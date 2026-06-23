@@ -1,5 +1,5 @@
 import { stats, about, features, how } from '../data/site'
-import { Reveal, WaveDivider } from './primitives'
+import { Reveal, WaveDivider, AnimatedNumber } from './primitives'
 import { Bolt, Check, ICONS } from './icons'
 
 export function StatsBand() {
@@ -10,7 +10,7 @@ export function StatsBand() {
         <div className="stats-grid">
           {stats.map((s, i) => (
             <div className="stat" key={i}>
-              <div className="num">{s.value}{s.unit && <small>{s.unit}</small>}</div>
+              <div className="num"><AnimatedNumber text={s.value} />{s.unit && <small>{s.unit}</small>}</div>
               <div className="lbl">{s.label}</div>
             </div>
           ))}

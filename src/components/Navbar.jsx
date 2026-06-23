@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { brand, nav } from '../data/site'
-import { Bolt, Menu } from './icons'
+import { nav } from '../data/site'
+import { GridXLogo } from './Logo'
+import { Menu } from './icons'
 import { Button } from './primitives'
 
 export default function Navbar() {
@@ -16,9 +17,8 @@ export default function Navbar() {
   return (
     <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
-        <a href="#top" className="logo">
-          <span className="bolt"><Bolt /></span>
-          {brand.name}
+        <a href="#top" className="logo" aria-label="GridX home">
+          <GridXLogo height={26} />
         </a>
 
         <nav className={`nav-links ${open ? 'open' : ''}`}>

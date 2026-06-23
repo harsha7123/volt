@@ -1,5 +1,6 @@
-import { brand, footer } from '../data/site'
-import { Bolt, ICONS } from './icons'
+import { brand, footer, contact } from '../data/site'
+import { GridXLogo } from './Logo'
+import { ICONS } from './icons'
 
 export default function Footer() {
   return (
@@ -7,11 +8,10 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer-grid">
           <div className="footer-brand">
-            <a href="#top" className="logo">
-              <span className="bolt"><Bolt /></span>
-              {brand.name}
+            <a href="#top" className="logo" aria-label="GridX home">
+              <GridXLogo height={28} />
             </a>
-            <p>{brand.tagline}</p>
+            <p>{brand.blurb}</p>
             <div className="socials">
               {footer.socials.map((s) => {
                 const Icon = ICONS[s.icon]
@@ -34,7 +34,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>{brand.copyright}</span>
-          <span>{brand.footerNote}</span>
+          <span>{contact.details[1].value} &middot; {contact.details[0].value.replace('+91 ', '')}</span>
         </div>
       </div>
     </footer>

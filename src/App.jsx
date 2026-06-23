@@ -1,9 +1,10 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Chargers from './components/Chargers'
+import Products from './components/Products'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { StatsBand, About, Features, HowItWorks } from './components/sections'
+import { Team, Gallery } from './components/showcase'
 
 export default function App() {
   return (
@@ -16,10 +17,12 @@ export default function App() {
       <Navbar />
       <Hero />
       <StatsBand />
+      <Products />
       <About />
-      <Chargers />
       <Features />
       <HowItWorks />
+      <Gallery />
+      <Team />
       <Contact />
       <Footer />
     </>

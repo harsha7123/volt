@@ -1,42 +1,44 @@
 /* =========================================================
-   DESIGN TOKENS
-   Change these CSS variables to retheme the entire site.
-   (e.g. swap --blue / --blue-deep for a different brand color)
+   GRIDX DESIGN TOKENS
+   Brand: green + charcoal on white (from the GridX logo).
+   Change these variables to retheme the entire site.
    ========================================================= */
 :root{
   /* surfaces */
-  --bg:#EDF3F9;
-  --bg-soft:#E3EDF6;
+  --bg:#FFFFFF;
+  --bg-soft:#F4F8F1;
+  --bg-soft-2:#EEF5E8;
   --white:#FFFFFF;
 
   /* text */
-  --ink:#273A52;
-  --ink-soft:#475D77;
-  --muted:#6E8198;
-  --muted-2:#9AAAC0;
+  --ink:#2E3539;        /* charcoal, like the "GRID" wordmark */
+  --ink-soft:#4A5358;
+  --muted:#6B767C;
+  --muted-2:#9AA4A9;
 
   /* lines */
-  --line:rgba(39,58,82,.09);
-  --line-strong:rgba(39,58,82,.15);
+  --line:rgba(46,53,57,.10);
+  --line-strong:rgba(46,53,57,.16);
 
-  /* brand (light blue) */
-  --blue:#5E97D6;
-  --blue-deep:#3F73B5;
-  --blue-soft:#AECBE9;
-  --sky:#7FB0E4;
+  /* brand green (from the logo X / arrow) */
+  --green:#74C043;
+  --green-deep:#549E2A;
+  --green-soft:#D7EEC4;
+  --green-tint:#EAF6E0;
 
-  --grad:linear-gradient(120deg,#6FA3DD,#9CC2EC);
-  --grad-deep:linear-gradient(120deg,#3F73B5,#5E97D6);
+  --grad:linear-gradient(120deg,#7FC94D,#A7DB7C);
+  --grad-deep:linear-gradient(120deg,#549E2A,#74C043);
 
   /* glass */
-  --glass:rgba(255,255,255,.6);
-  --glass-strong:rgba(255,255,255,.76);
+  --glass:rgba(255,255,255,.62);
+  --glass-strong:rgba(255,255,255,.8);
   --glass-border:rgba(255,255,255,.9);
 
   /* shape & motion */
-  --radius:26px;
-  --maxw:1180px;
+  --radius:22px;
+  --radius-sm:14px;
+  --maxw:1200px;
   --ease:cubic-bezier(.22,.61,.36,1);
-  --shadow:0 26px 60px -30px rgba(40,70,110,.32);
-  --shadow-soft:0 14px 40px -24px rgba(40,70,110,.26);
+  --shadow:0 26px 60px -30px rgba(40,70,40,.30);
+  --shadow-soft:0 14px 40px -24px rgba(40,70,40,.22);
 }

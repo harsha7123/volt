@@ -233,3 +233,108 @@ footer{background:var(--white);padding:72px 0 36px;border-top:1px solid var(--li
   .reveal{opacity:1;transform:none}
   .stage{transform:rotateX(9deg) rotateY(-26deg)}
 }
+
+/* =========================================================
+   WEBGL HERO ORB + ENHANCEMENTS (redesign layer)
+   ========================================================= */
+.scene-3d{overflow:visible}
+.orb-canvas{position:absolute!important;inset:0;width:100%!important;height:100%!important}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:28px;
+  box-shadow:0 40px 90px -30px rgba(40,70,40,.45);animation:heroPhotoFloat 7s ease-in-out infinite}
+@keyframes heroPhotoFloat{50%{transform:translateY(-10px)}}
+@media(prefers-reduced-motion:reduce){.hero-photo{animation:none}}
+
+/* mobile / reduced-motion fallback: a soft glowing gradient orb */
+.orb-fallback{position:absolute;left:50%;top:50%;width:300px;height:300px;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle at 38% 34%,#cfe0f7,#7fa6e0 46%,#4f7fc0 78%);
+  box-shadow:0 40px 90px -30px rgba(60,100,170,.55),inset -16px -22px 50px rgba(40,70,120,.35),inset 14px 14px 40px rgba(255,255,255,.7);
+  animation:orbFloat 7s ease-in-out infinite}
+@keyframes orbFloat{50%{transform:translate(-50%,-58%) scale(1.03)}}
+
+/* the live percentage chip over the orb */
+.chip-pct{position:absolute;left:-4px;top:54px;right:auto;padding:14px 18px;text-align:left;animation:floaty2 7s ease-in-out infinite}
+.chip-pct .pct-big{font-weight:700;font-size:2rem;line-height:1;letter-spacing:-.03em;color:var(--ink)}
+.chip-pct .pct-big span{font-size:.95rem;color:var(--muted);margin-left:2px}
+.chip-pct .pct-sub{font-family:'JetBrains Mono';font-size:.62rem;letter-spacing:.08em;color:var(--blue-deep);text-transform:uppercase;margin-top:6px}
+
+/* shimmer sweep on the primary button */
+.btn-primary{position:relative;overflow:hidden}
+.btn-primary::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);
+  animation:shimmer 4s ease-in-out infinite}
+@keyframes shimmer{0%{left:-130%}55%,100%{left:130%}}
+
+@media(max-width:760px){
+  .chip-pct{left:8px;top:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  .orb-fallback,.btn-primary::after,.chip-pct{animation:none!important}
+}
+
+/* =========================================================
+   GRIDX SECTIONS (products, team, gallery, image slots)
+   ========================================================= */
+
+/* recolor the hero fallback orb + ambient to green */
+.orb-fallback{background:radial-gradient(circle at 38% 34%,#dff3cd,#8fce5a 46%,#5aa233 78%);
+  box-shadow:0 40px 90px -30px rgba(70,130,40,.5),inset -16px -22px 50px rgba(50,90,30,.32),inset 14px 14px 40px rgba(255,255,255,.75)}
+.ambient .b1{background:radial-gradient(circle,#d9f0c4,transparent 65%)}
+.ambient .b2{background:radial-gradient(circle,#e6f5d8,transparent 65%)}
+.ambient .b3{background:radial-gradient(circle,#dff0cd,transparent 65%)}
+.chip-pct .pct-sub{color:var(--green-deep)}
+
+/* image placeholder + real image */
+.img-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+  color:var(--muted-2);background:linear-gradient(160deg,var(--green-tint),#e7f2dd);border:1px dashed var(--line-strong);border-radius:var(--radius-sm);font-size:.78rem;text-align:center;padding:14px}
+.img-real{width:100%;height:100%;object-fit:cover;border-radius:var(--radius-sm);display:block}
+
+/* PRODUCTS */
+.product-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:46px 0 24px}
+.product-tab{background:var(--white);border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:16px 14px;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:4px;transition:.25s var(--ease)}
+.product-tab:hover{border-color:var(--green);transform:translateY(-2px)}
+.product-tab.active{border-color:var(--green);background:var(--green-tint);box-shadow:var(--shadow-soft)}
+.product-tab .pt-name{font-weight:600;font-size:1rem;color:var(--ink)}
+.product-tab .pt-power{font-family:'JetBrains Mono';font-weight:700;font-size:1.25rem;color:var(--green-deep)}
+.product-tab .pt-power small{font-size:.8rem;color:var(--muted)}
+
+.product-detail{display:grid;grid-template-columns:.85fr 1.15fr;gap:36px;padding:30px;animation:fadeUp .4s var(--ease)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.pd-media{position:relative;min-height:300px}
+.pd-img{height:100%}
+.pd-tag{position:absolute;top:14px;left:14px;background:var(--grad-deep);color:#fff;font-family:'JetBrains Mono';font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.pd-body h3{font-weight:700;font-size:1.8rem;letter-spacing:-.02em}
+.pd-power{font-family:'JetBrains Mono';font-weight:700;font-size:2rem;background:var(--grad-deep);-webkit-background-clip:text;background-clip:text;color:transparent;margin:2px 0 10px}
+.pd-power span{font-size:1rem;-webkit-text-fill-color:var(--muted)}
+.pd-summary{color:var(--muted);margin-bottom:18px;max-width:52ch}
+.pd-highlights{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.pd-pill{display:inline-flex;align-items:center;gap:6px;background:var(--green-tint);color:var(--green-deep);border:1px solid var(--green-soft);font-size:.82rem;font-weight:500;padding:6px 12px;border-radius:999px}
+.pd-specs{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;margin-bottom:24px}
+.pd-spec{display:flex;flex-direction:column;gap:2px;padding:11px 0;border-top:1px solid var(--line)}
+.pd-k{font-family:'JetBrains Mono';font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pd-v{font-size:.92rem;color:var(--ink)}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+.team-card{padding:24px;text-align:center}
+.team-photo{width:120px;height:120px;border-radius:50%;margin:0 auto 16px;overflow:hidden}
+.team-photo.img-placeholder{border-radius:50%}
+.team-card h3{font-weight:600;font-size:1.2rem}
+.team-card p{color:var(--green-deep);font-size:.9rem;font-family:'JetBrains Mono';letter-spacing:.04em}
+
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
+.gallery-item{position:relative;border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--line)}
+.gallery-item .img-real,.gallery-item .img-placeholder{border-radius:0}
+.gallery-cap{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;font-size:.8rem;color:#fff;background:linear-gradient(0deg,rgba(20,40,15,.78),transparent);font-weight:500}
+
+@media(max-width:900px){
+  .product-tabs{grid-template-columns:1fr 1fr}
+  .product-detail{grid-template-columns:1fr;gap:24px}
+  .pd-specs{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .product-tabs{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:1fr}
+}

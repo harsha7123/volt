@@ -42,10 +42,17 @@ export const Instagram = (p) => (
 export const LinkedIn = (p) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...p}><path d="M4 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM2 9h4v12H2zM9 9h4v2c.6-1 2-2 4-2 3 0 4 2 4 5v7h-4v-6c0-1.5-.5-2.5-2-2.5S13 14 13 15.5V21H9z"/></svg>
 )
+export const BoltIcon = (p) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...p}><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+)
+export const Plug = (p) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" {...p}><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-12 0zM12 17v5"/></svg>
+)
 
 /* name -> component map, so data files can reference icons by string */
 export const ICONS = {
   map: Map, card: Card, shield: Shield, chat: Chat,
   phone: Phone, mail: Mail, pin: Pin, clock: Clock,
   twitter: Twitter, instagram: Instagram, linkedin: LinkedIn,
+  bolt: BoltIcon, plug: Plug,
 }
