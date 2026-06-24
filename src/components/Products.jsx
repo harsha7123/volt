@@ -36,7 +36,11 @@ export default function Products() {
         <div className="product-detail glass" key={p.id}>
           <div className="pd-media">
             <Img src={p.img} alt={`${p.name} charger`} ratio="4 / 5" className="pd-img" />
-            <span className="pd-tag">{p.tag}</span>
+            {p.showLogoOverlay && (
+              <div className="pd-logo-overlay">
+                <img src="/gridx-logo.png" alt="GridX" />
+              </div>
+            )}
           </div>
 
           <div className="pd-body">

@@ -18,7 +18,7 @@ export default function Navbar() {
     <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
         <a href="#top" className="logo" aria-label="GridX home">
-          <GridXLogo height={26} />
+          <GridXLogo height={40} />
         </a>
 
         <nav className={`nav-links ${open ? 'open' : ''}`}>

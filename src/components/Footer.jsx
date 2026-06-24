@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <a href="#top" className="logo" aria-label="GridX home">
-              <GridXLogo height={28} />
+              <GridXLogo height={42} />
             </a>
             <p>{brand.blurb}</p>
             <div className="socials">
