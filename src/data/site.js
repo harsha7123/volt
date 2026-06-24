@@ -61,7 +61,7 @@ export const about = {
     { title: 'Transparent pricing', text: 'Pay per kWh. No connection charges or hidden idle penalties.' },
     { title: 'Monitored 24/7', text: 'Every charger is remotely monitored over OCPP, so faults are caught and fixed fast.' },
   ],
-  img: '',
+  img: '/images/gridx-about.png',
 }
 
 export const products = {
@@ -73,7 +73,7 @@ export const products = {
       id: 'ac',
       name: 'GridX AC',
       tag: 'Home & workplace',
-      power: '7.4–22',
+      power: '7.4',
       unit: 'kW',
       summary: 'Wall-mounted AC charging for overnight and dwell-time top-ups. Gentle on the battery, easy to install.',
       img: '/images/gridx-ac.jpg',

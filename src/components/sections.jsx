@@ -1,5 +1,5 @@
 import { stats, about, features, how } from '../data/site'
-import { Reveal, WaveDivider, AnimatedNumber } from './primitives'
+import { Reveal, WaveDivider, AnimatedNumber,Img } from './primitives'
 import { Bolt, Check, ICONS } from './icons'
 
 export function StatsBand() {
@@ -39,12 +39,8 @@ export function About() {
           </div>
         </Reveal>
 
-        <Reveal className="about-visual" aria-hidden="true">
-          <div className="cube">
-            {['cf', 'cb', 'cr', 'cl', 'ct', 'cbo'].map((c) => (
-              <div className={c} key={c}><Bolt /></div>
-            ))}
-          </div>
+        <Reveal className="about-visual">
+          <Img src={about.img} alt="EV charging at a GridX station" ratio="4 / 3" className="about-img" />
         </Reveal>
       </div>
     </section>
