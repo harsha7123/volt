@@ -220,7 +220,7 @@ export const contact = {
     'Become a charging host / partner',
     'Something else',
   ],
-  formEndpoint: '',
+  formEndpoint: 'https://script.google.com/macros/s/AKfycby7KxdSicShGVtX6O9tuBqitaPQ2eH0vsUvZFsApC5oHnWfssFYk_AkJ0DuqwKrS0D_Qg/exec',
 }
 
 export const footer = {

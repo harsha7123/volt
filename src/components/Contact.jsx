@@ -20,12 +20,14 @@ export default function Contact() {
     try {
       setSubmitting(true)
       const data = Object.fromEntries(new FormData(e.target).entries())
-      const res = await fetch(contact.formEndpoint, {
+      await fetch(contact.formEndpoint, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(data),
       })
-      if (!res.ok) throw new Error('Request failed')
+      // Apps Script doesn't send CORS headers, so the response isn't readable.
+      // The row is written; we optimistically show success once the request is sent.
       setSent(true)
     } catch {
       setError('Something went wrong. Please try again or email us directly.')

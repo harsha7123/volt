@@ -1,28 +1,7 @@
-import { team, gallery } from '../data/site'
+import {  gallery } from '../data/site'
 import { Reveal, Img } from './primitives'
 
-export function Team() {
-  return (
-    <section className="section" id="team">
-      <div className="wrap">
-        <Reveal>
-          <span className="eyebrow">{team.eyebrow}</span>
-          <h2 className="section-title">{team.title}</h2>
-          <p className="section-lead">{team.lead}</p>
-        </Reveal>
-        <div className="team-grid">
-          {team.members.map((m, i) => (
-            <Reveal className="team-card glass" key={i}>
-              <Img src={m.img} alt={m.name} ratio="1 / 1" className="team-photo" />
-              <h3>{m.name}</h3>
-              <p>{m.role}</p>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
+
 
 export function Gallery() {
   return (
