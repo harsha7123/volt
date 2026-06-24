@@ -185,6 +185,7 @@ export const gallery = {
   title: 'Chargers, installed and running.',
   lead: 'Add your real installation photos in /public/images and list them below.',
   items: [
+    { caption: 'Upcoming · NH44 Hyderabad–Bangalore, Beechupally', img: '/images/upcoming-beechupally.jpeg' },
     { caption: 'Residential complex · Hyderabad', img: '/images/install-residential.jpg' },
     { caption: 'Workplace parking · Manikonda', img: '/images/install-manikonda.jpg' },
     { caption: 'Retail / mall bay', img: '/images/install-retail.jpg' },
