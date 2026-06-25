@@ -253,8 +253,8 @@ export const footer = {
     },
   ],
   socials: [
-    { icon: 'twitter', href: '#', label: 'Twitter' },
-    { icon: 'instagram', href: '#', label: 'Instagram' },
-    { icon: 'linkedin', href: '#', label: 'LinkedIn' },
+    { icon: 'twitter', href: 'https://x.com/Gridx_ev_charge', label: 'Twitter' },
+    { icon: 'instagram', href: 'https://www.instagram.com/gridx_ev_charge/', label: 'Instagram' },
+    { icon: 'linkedin', href: 'https://www.linkedin.com/in/gridx-evcharge-530753419/', label: 'LinkedIn' },
   ],
 }

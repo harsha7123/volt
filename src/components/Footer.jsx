@@ -16,7 +16,7 @@ export default function Footer() {
               {footer.socials.map((s) => {
                 const Icon = ICONS[s.icon]
                 return (
-                  <a key={s.label} href={s.href} aria-label={s.label}>
+                  <a key={s.label} href={s.href} aria-label={s.label} target="_blank" rel="noopener noreferrer">
                     {Icon && <Icon width="18" height="18" />}
                   </a>
                 )
